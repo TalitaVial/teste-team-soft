@@ -1,18 +1,3 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-    /*=====variables */
-  --background-header: #f4f4f4;
-  --color-btn: #F09035;
-  --color-line: #E8A634;
-  --background-yellow: rgba(253,215,14,0.3);
-  --color-text-web-header: #ED3237;
-  --color-title-text-body: #4E4E4E;
-  --color-text-orange: #E49700;
-  --color-money: #DC6E05;
-}
 
 
   .header {
@@ -21,6 +6,7 @@
     width: 100%;
     background: var(--background-header);
   }
+
 
   .header__logo{
     display: flex;
@@ -33,7 +19,7 @@
 
   .header__selected{
     border: none;
-    width: 14rem;
+    width: 20%;
     height: 3rem;
   }
 
@@ -42,6 +28,24 @@
     width: 22rem;
     height: 3rem;
     border-radius: .25rem;
+  }
+
+  .header__login{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 15%;
+  }
+
+  .header--user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .header--text{
+    margin-left: .5rem;
   }
 
 
