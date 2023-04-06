@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+    /*=====variables */
+  --background-header: #f4f4f4;
+  --color-btn: #F09035;
+  --color-line: #E8A634;
+  --background-yellow: rgba(253,215,14,0.3);
+  --color-text-web-header: #ED3237;
+  --color-title-text-body: #4E4E4E;
+  --color-text-orange: #E49700;
+  --color-money: #DC6E05;
+}
+
+
+  .header {
+    display: flex;
+    height: 3.5rem;
+    width: 100%;
+    background: var(--background-header);
+  }
+
+  .header__logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin-left: 5%;
+    height: 100%;
+  }
+
+  .header__selected{
+    border: none;
+    width: 14rem;
+    height: 3rem;
+  }
+
+  .header__search{
+    border: 1px solid var(--color-text-web-header);
+    width: 22rem;
+    height: 3rem;
+    border-radius: .25rem;
+  }
+
+
