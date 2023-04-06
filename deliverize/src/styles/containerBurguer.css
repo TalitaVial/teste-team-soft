@@ -1,0 +1,65 @@
+.container{
+    margin: 1rem; 
+
+}
+
+.container__Burguer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 22rem;
+    height: 8.18rem;
+
+}
+
+.container--imgBurguer{
+    width: 60%;
+    height: 100%;
+}
+
+.container__description{
+    margin: 1.5rem 1rem;
+    width: 90%;
+}
+
+.container--title, h3{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+    margin: 1.5rem 0 1rem 0;
+    font-weight: 500;
+    font-size: 1.12rem;
+    color: var(--color-title-text-body);
+}
+
+.container__ingredients{
+    font-size: 1rem;
+    color: var(--color-title-text-body);
+    font-weight: 400;
+}
+
+.container--money{
+    margin-top: 1rem;
+    display: flex;
+    width: 35%;
+}
+
+.container--money--sale{
+    margin-right: .5rem;
+    font-size: .88rem;
+    color: var(--color-text-orange);
+    font-weight: 400;
+}
+
+.container--money--noSale{
+    font-size: .88rem;
+    color: var(--color-title-text-body);
+    font-weight: 400;
+}
+
+.container__menu{
+    width: 100%;
+    
+}

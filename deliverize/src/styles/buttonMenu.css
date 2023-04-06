@@ -4,7 +4,7 @@
     justify-content: space-around;
     width: 5.5rem;
     height: 2rem;
-    border: 1.3px solid  #f09035;
+    border: 1.3px solid var(--color-btn);
     border-radius: .4rem;
 }
 
