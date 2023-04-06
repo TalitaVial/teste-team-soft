@@ -1,0 +1,22 @@
+.container__ToAdd{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--background-yellow);
+    width: 100%;
+    height: 3.5rem;
+}
+
+.container__text{
+    font-size: .88rem;
+    margin-left: .92rem;
+    height:1.5rem;
+    font-weight: 500;
+}
+
+.container__text--limit{
+    font-size: 0.75rem;
+    margin-left: .92rem;
+    color: var(--color-text-orange);
+    font-weight: 400;
+}
