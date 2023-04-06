@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  
+      /*=====variables */
+    --background-header: #f4f4f4;
+    --color-btn: #F09035;
+    --color-line: #E8A634;
+    --background-yellow: rgba(253,215,14,0.2);
+    --color-text-web-header: #ED3237;
+    --color-title-text-body: #4E4E4E;
+    --color-text-orange: #E49700;
+    --color-money: #DC6E05;
+    --color-white: #FFFFFF;
+  }
+  
+
+  body{
+    width: 100vw;
+    height: 100vh;
+  }
