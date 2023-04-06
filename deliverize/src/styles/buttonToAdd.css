@@ -1,0 +1,8 @@
+.btnToAdd{
+    width: 12rem;
+    height: 2.5rem;
+    background: #f09035;
+    border: none;
+    border-radius: 0.25rem;
+    color: white;
+}
