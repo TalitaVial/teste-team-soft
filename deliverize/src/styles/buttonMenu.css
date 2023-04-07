@@ -19,13 +19,14 @@
 .btn__link--add{
     border: none;
     background: none;
+    cursor: pointer;
 }
-
 
 .btn__link--remove{
     display: flex;
     align-items: center;
     background: none;
     border: none;
+    cursor: pointer;
 }
 

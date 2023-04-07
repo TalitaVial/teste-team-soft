@@ -2,21 +2,41 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: .5rem;
     height: 3rem;
     width: 100%;
+    margin-top: .5rem;
 }
-
-
 
 .container--item{
     display: flex;
-    align-items: center;
     justify-content: space-between;
     margin-bottom: .5rem;
     font-size: .88rem;
     color: var( --color-title-text-body);
 }
+
+
+input[type='radio'] {
+    display: none;
+  }
+  
+    label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .custom-radio {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    border: 1px solid  var(--color-eclipse);
+  }
+  
+  input[type='radio']:checked + .custom-radio {
+    background: var(--color-eclipse);
+  }
 
 
 

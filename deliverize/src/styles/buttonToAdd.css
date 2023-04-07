@@ -1,8 +1,18 @@
-.btnToAdd{
-    width: 12rem;
+.container__btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.container--btnToAdd{
+    width: 50%;
     height: 2.5rem;
+    margin-left: .5rem;
     background: var(--color-btn);
+    color: var(--color-white);
     border: none;
     border-radius: 0.25rem;
-    color: var(--color-white);
 }
