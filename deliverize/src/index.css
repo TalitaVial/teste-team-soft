@@ -14,10 +14,8 @@
     --color-text-orange: #E49700;
     --color-money: #DC6E05;
     --color-white: #FFFFFF;
+    --color-eclipse: #febc10;
   }
   
 
-  body{
-    width: 100vw;
-    height: 100vh;
-  }
+ 
