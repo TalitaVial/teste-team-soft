@@ -1,6 +1,6 @@
-import '../styles/containerToAdd.css'
+import '../styles/additionalOrder.css'
 
-export default function ContainerToAdd({titulo, descricao}){
+export default function AdditionalOrder({titulo, descricao}){
     return(
         <div className="container__ToAdd">
             <p className='container__text'>{titulo}</p>

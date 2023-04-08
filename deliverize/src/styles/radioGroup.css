@@ -9,8 +9,8 @@
 
 .container--item{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    margin-bottom: .5rem;
     font-size: .88rem;
     color: var( --color-title-text-body);
 }
@@ -25,6 +25,7 @@ input[type='radio'] {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: .5rem;
   }
   
   .custom--radio {

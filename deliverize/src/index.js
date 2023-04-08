@@ -4,14 +4,14 @@ import './index.css'
 // import Popover from './components/popover';
 
 import Header from './components/header';
-import ContainerBurguer from './components/containerBurguer';
+import OrderPage from './components/orderPage';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   <Header/>
-  <ContainerBurguer/>
+  <OrderPage/>
   {/* <Popover/> */}
   </React.StrictMode>
 );

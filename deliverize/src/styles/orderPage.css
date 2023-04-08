@@ -1,0 +1,148 @@
+.container {
+  margin: 1rem;
+}
+
+.container__Burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 22rem;
+  height: 8.18rem;
+}
+
+.container--imgBurger {
+  width: 60%;
+  height: 100%;
+}
+
+.container__description {
+  margin: 1.5rem 1rem;
+  width: 90%;
+}
+
+.container--title,
+h3 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 2.5rem;
+  margin: 1.5rem 0 1rem 0;
+  font-weight: 500;
+  font-size: 1.12rem;
+  color: var(--color-title-text-body);
+}
+
+.container__ingredients {
+  font-size: 1rem;
+  color: var(--color-title-text-body);
+  font-weight: 400;
+}
+
+.container--money {
+  margin-top: 1rem;
+  display: flex;
+  width: 35%;
+}
+
+.container--money--sale {
+  margin-right: 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--color-text-orange);
+}
+
+.container--money--noSale {
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: var(--color-title-text-body);
+  text-decoration: line-through;
+}
+
+.container__btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.container--btnToAdd {
+  width: 50%;
+  height: 2.5rem;
+  margin-left: 0.5rem;
+  background: var(--color-btn);
+  color: var(--color-white);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+  .container {
+    display: flex;
+    margin: 1rem;
+  }
+
+  .container__menu {
+    width: 50%;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+  }
+
+  .container__webBurger {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: auto;
+    width: 50%;
+    margin-right: 7rem;
+  }
+
+  .container__Burger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container--imgBurger {
+    width: 100%;
+    height: 100%;
+  }
+
+  .container__description {
+    margin: 0;
+    width: 90%;
+  }
+
+  .container__menu--itens {
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .container--title,
+  h3 {
+    height: 5rem;
+    font-size: 1.75rem;
+  }
+
+  .container__ingredients {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  .container--money--sale {
+    margin-right: 1rem;
+    font-size: 2rem;
+  }
+
+  .container--money--noSale {
+    font-size: 2rem;
+  }
+}
