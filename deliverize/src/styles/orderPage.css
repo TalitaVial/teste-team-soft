@@ -8,7 +8,10 @@
   justify-content: center;
   margin: 0 auto;
   width: 22rem;
+  max-width: 30rem;
   height: 8.18rem;
+  max-height: 22rem;
+
 }
 
 .container--imgBurger {

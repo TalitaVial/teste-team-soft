@@ -32,7 +32,7 @@ export default function Header() {
             <p className="header--text">Entrar</p>
           </div>
           <div className="header--user">
-            <img src={shopping} alt="shopping" />
+            <img className="header--user--img" src={shopping} alt="shopping" />
             <p className="header--text">Carrinho</p>
           </div>
         </div>
