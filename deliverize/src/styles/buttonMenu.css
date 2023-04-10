@@ -33,7 +33,7 @@
 .btn--remove--disable {
   position: absolute;
   content: "";
-  width: .9rem;
-  height: 0.20rem;
+  width: 0.9rem;
+  height: 0.2rem;
   background: var(--color-btn-disable);
 }

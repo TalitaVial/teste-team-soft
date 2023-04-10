@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  
+
   --background-header: #f4f4f4;
   --color-btn: #f09035;
   --color-line: #e8a634;
@@ -17,10 +17,10 @@
   --color-placeholder: #656363;
   --color-select-placeholder: #d80000;
   --color-title-sale-popover: #bc2e31;
-  --color-btn-disable: #AEB6C1;
+  --color-btn-disable: #aeb6c1;
 }
 
-body{
+body {
   width: 100vw;
   height: 100vh;
 }

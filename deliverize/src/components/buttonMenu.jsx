@@ -3,16 +3,15 @@ import remove from "../assets/remove.png";
 import add from "../assets/add.png";
 import { useState } from "react";
 
-export default function ButtonMenu({onChangeValue}) {
-
+export default function ButtonMenu({ onChangeValue }) {
   const [items, setItems] = useState(0);
 
   const handleRemoveItem = (e) => {
     e.preventDefault();
     if (items >= 1) {
       const removeItem = items - 1;
-      onChangeValue(removeItem)
-      setItems(removeItem)
+      onChangeValue(removeItem);
+      setItems(removeItem);
       return;
     }
   };
@@ -21,7 +20,7 @@ export default function ButtonMenu({onChangeValue}) {
     e.preventDefault();
     if (items <= 7) {
       const addItem = items + 1;
-      onChangeValue(addItem)
+      onChangeValue(addItem);
       setItems(addItem);
       return;
     }
