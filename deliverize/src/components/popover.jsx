@@ -2,7 +2,8 @@ import "../styles/popover.css";
 
 export default function Popover() {
   return (
-      <div className="container">
+  
+      <div className="container_pop">
         <div className="container__title">
           <p>Adicionado com Sucesso</p>
         </div>
@@ -17,6 +18,7 @@ export default function Popover() {
           </ul>
         </div>
       </div>
+
 
   );
 }

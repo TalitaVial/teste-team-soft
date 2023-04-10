@@ -1,24 +1,26 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
   
-      /*=====variables */
-    --background-header: #f4f4f4;
-    --color-btn: #F09035;
-    --color-line: #E8A634;
-    --background-yellow: rgba(253,215,14,0.2);
-    --color-text-web-header: #ED3237;
-    --color-title-text-body: #4E4E4E;
-    --color-text-orange: #E49700;
-    --color-money: #DC6E05;
-    --color-white: #FFFFFF;
-    --color-eclipse: #febc10;
-    --color-placeholder: #656363;
-    --color-select-placeholder: #D80000;
-    --color-title-sale-popover: #BC2E31;
-  }
-  
+  --background-header: #f4f4f4;
+  --color-btn: #f09035;
+  --color-line: #e8a634;
+  --background-yellow: rgba(253, 215, 14, 0.2);
+  --color-text-web-header: #ed3237;
+  --color-title-text-body: #4e4e4e;
+  --color-text-orange: #e49700;
+  --color-money: #dc6e05;
+  --color-white: #ffffff;
+  --color-eclipse: #febc10;
+  --color-placeholder: #656363;
+  --color-select-placeholder: #d80000;
+  --color-title-sale-popover: #bc2e31;
+  --color-btn-disable: #AEB6C1;
+}
 
- 
+body{
+  width: 100vw;
+  height: 100vh;
+}
