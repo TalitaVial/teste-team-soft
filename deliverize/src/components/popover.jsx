@@ -1,24 +1,26 @@
+import React from "react";
 import "../styles/popover.css";
+import { ContextOrders } from "../provider/contextOrders";
 
-export default function Popover() {
+export default function Popover({ order }) {
+const {orders} = React.useContext(ContextOrders)
   return (
-  
-      <div className="container_pop">
-        <div className="container__title">
-          <p>Adicionado com Sucesso</p>
-        </div>
-        <div className="container--popover">
-          <p className="container--sale">Oferta Cheddar Bacon</p>
-          <p className="container--text">Ingredientes</p>
-          <ul className="container--list">
-            <li className="container--list--item">1 Carne 250gr</li>
-            <li className="container--list--item">2 Queijo Cheddar</li>
-            <li className="container--list--item">1 Bacon</li>
-            <li className="container--list--item">Molho Especial</li>
-          </ul>
-        </div>
+    <div className="container_pop">
+      <div className="container__title">
+        <p>Adicionado com Sucesso</p>
       </div>
-
-
+      <div className="container--popover">
+      <p className="container--sale">{orders[0].nm_product}</p>  
+        <p className="container--text">Ingredientes</p>
+        <ul className="container--list">
+          {order.ingredients.map((ingredient, i) => (
+            <li key={i} className="container--list--item">
+             {ingredient.qntd} {" "}
+              {ingredient.nm_item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 }

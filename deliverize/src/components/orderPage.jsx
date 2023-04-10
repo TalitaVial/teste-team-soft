@@ -7,13 +7,23 @@ import AdditionalOrder from "./additionalOrder";
 import Loading from "./loanding";
 import api from "../services/api";
 import Popover from "./popover";
-
 import React, { useEffect, useState } from "react";
+import { ContextOrders } from "../provider/contextOrders";
 
 export default function OrderPage() {
   const [product, setProduct] = useState();
   const [isLoading, setIsLoading] = useState(true);
   const [popover, setPopover] = useState(false);
+  const { setOrders } = React.useContext(ContextOrders)
+  const [order, setOrder] = useState(
+ { id: '',
+      nm_product: '' ,
+      description:'' ,
+      vl_price:'',
+      ingredients: [],
+      cutlery:'' ,
+      qntdOrder: 1
+  }) 
 
   const getIngredients = () => {
     const indexIngredients = 0;
@@ -43,8 +53,36 @@ export default function OrderPage() {
       setTimeout(() => {
         setPopover(false);
       }, "1000");
+
+      const dados = 
+        {
+          id: product.id,
+          nm_product: product.nm_product,
+          description: product.description,
+          vl_price: product.vl_price,
+          vl_sale: product.vl_discount,
+        }
+      ;
+      setOrders(prev => ([...prev, dados ]));
     }
   };
+
+  const onChangeValue = (value) =>{
+    const copiaIngredients = order.ingredients
+    const indexIngredient = copiaIngredients.findIndex(({id})=> id === value.id)
+    if(indexIngredient >= 0){
+      copiaIngredients[indexIngredient] = value
+      setOrder(prev=>({...prev, ingredients: copiaIngredients}))
+      return;
+    }
+    if(indexIngredient < 0){
+      setOrder(prev=>({...prev,
+        ingredients: [...prev.ingredients, value]
+       }))
+       return;
+    } 
+
+  }
 
   return (
     <div className="container">
@@ -52,7 +90,7 @@ export default function OrderPage() {
       {!isLoading && (
         <>
           <div className="container__webBurger">
-            {popover && <Popover />}
+            {popover && <Popover order={order}/>}
             <div className="container__Burger">
               <img
                 className="container--imgBurger"
@@ -60,7 +98,6 @@ export default function OrderPage() {
                 alt="FotoBurger"
               />
             </div>
-
             <div className="container__description">
               <div className="container--title">
                 <h3>{product.nm_product}</h3>
@@ -84,6 +121,7 @@ export default function OrderPage() {
               />
               {getIngredients().map((ingredient, i) => (
                 <ListMenu
+                  onChangeValue={(qntd)=> onChangeValue({...ingredient, qntd})}
                   key={i}
                   item={ingredient.nm_item}
                   valor={ingredient.vl_item}
@@ -96,9 +134,8 @@ export default function OrderPage() {
                   { value: 0, label: "Não" },
                 ]}
               />
-
               <div className="container__btn">
-                <ButtonMenu />
+                <ButtonMenu onChangeValue={(totalOrder)=> setOrder(prev=>({...prev,qntdOrder: totalOrder}))} />
                 <button
                   onClick={(e) => registerOrder(e)}
                   className="container--btnToAdd"
