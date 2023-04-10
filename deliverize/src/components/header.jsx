@@ -3,8 +3,13 @@ import Deliverize from "../assets/Deliverize.svg";
 import user from "../assets/user.svg";
 import shopping from "../assets/shopping.svg";
 import "../styles/header.css";
+import { ContextOrders } from "../provider/contextOrders";
+import React from "react";
 
 export default function Header() {
+  const {orders} = React.useContext(ContextOrders)
+  var total = orders.length
+
   return (
     <div className="header">
       <div className="header__logo">
@@ -32,6 +37,7 @@ export default function Header() {
             <p className="header--text">Entrar</p>
           </div>
           <div className="header--user">
+            {total >= 1 &&<div className="header--notification">{total}</div>}
             <img className="header--user--img" src={shopping} alt="shopping" />
             <p className="header--text">Carrinho</p>
           </div>
