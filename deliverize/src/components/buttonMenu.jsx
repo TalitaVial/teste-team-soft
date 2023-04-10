@@ -1,22 +1,48 @@
+import "../styles/buttonMenu.css";
+import remove from "../assets/remove.png";
+import add from "../assets/add.png";
+import { useState } from "react";
 
-import '../styles/buttonMenu.css'
-import remove from '../assets/remove.png'
-import add from    '../assets/add.png'
+export default function ButtonMenu() {
+  const [items, setItems] = useState(0);
 
-export default function ButtonMenu(){
-    return(
-        <div className='contain__btn'>
-            <div className='btn'>
-                <div className='btn__img'>
-                    <button className='btn__link--remove'><img  src={remove} alt="remove" /></button>
-                </div>
-                2
-                <div className='btn__img'>
-                    <button className='btn__link--add'><img src={add} alt="add" /></button>
-                </div>
-            </div>
+  const handleRemoveItem = (e) => {
+    e.preventDefault();
+    if (items >= 1) {
+      const removeItem = items - 1;
+      setItems(removeItem);
+      return;
+    }
+  };
+
+  const handleAddItem = (e) => {
+    e.preventDefault();
+    if (items <= 7) {
+      const addItem = items + 1;
+      setItems(addItem);
+      return;
+    }
+  };
+
+  return (
+    <div className="contain__btn">
+      <div className="btn">
+        <div className="btn__img">
+          <button
+            onClick={(e) => handleRemoveItem(e)}
+            className="btn__link--remove"
+          >
+            <img src={remove} alt="remove" />
+            {items <= 0 && <div className="btn--remove--disable"></div>}
+          </button>
         </div>
-
-    )
-    
+        {items}
+        <div className="btn__img">
+          <button onClick={(e) => handleAddItem(e)} className="btn__link--add">
+            <img src={add} alt="add" />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 }
