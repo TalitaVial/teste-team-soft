@@ -1,5 +1,9 @@
 # teste-team-soft
 
+### `npm install`
+
+Instala as dependências do projeto
+
 ### `npm start`
 
 Executa o aplicativo no modo de desenvolvimento.
