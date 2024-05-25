@@ -1,5 +1,5 @@
-import ButtonMenu from "./buttonMenu";
-import "../styles/listMenu.css";
+import ButtonMenu from "../buttonMenu/buttonMenu";
+import "./listMenu.css";
 
 export default function ListMenu({ item, valor, onChangeValue }) {
   return (
