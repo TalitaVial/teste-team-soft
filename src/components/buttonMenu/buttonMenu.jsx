@@ -1,6 +1,6 @@
-import "../styles/buttonMenu.css";
-import remove from "../assets/remove.png";
-import add from "../assets/add.png";
+import "./buttonMenu.css";
+import remove from "../../assets/remove.png";
+import add from "../../assets/add.png";
 import { useState } from "react";
 
 export default function ButtonMenu({ onChangeValue }) {

@@ -1,4 +1,4 @@
-import "../styles/additionalOrder.css";
+import "./additionalOrder.css";
 
 export default function AdditionalOrder({ titulo, descricao }) {
   return (

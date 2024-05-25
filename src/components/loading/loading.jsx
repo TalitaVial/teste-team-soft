@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/loading.css";
-import Load from "../assets/loading.svg";
+import "./loading.css";
+import Load from "../../assets/loading.svg";
 
 export default function Loading() {
   return (

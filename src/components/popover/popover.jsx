@@ -1,6 +1,6 @@
 import React from "react";
-import "../styles/popover.css";
-import { ContextOrders } from "../provider/contextOrders";
+import "./popover.css";
+import { ContextOrders } from "../../provider/contextOrders";
 
 export default function Popover({ order }) {
   const { orders } = React.useContext(ContextOrders);

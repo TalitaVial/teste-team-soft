@@ -1,5 +1,5 @@
-import "../styles/radioGroup.css";
-import RadioButton from "./radioButton";
+import "./radioGroup.css";
+import RadioButton from "../radioButton/radioButton";
 
 export default function RadioGroup(props) {
   return (

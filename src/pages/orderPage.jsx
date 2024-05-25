@@ -1,12 +1,12 @@
 import Burguer from "../assets/foto.png";
-import "../styles/orderPage.css";
-import ListMenu from "./listMenu";
-import ButtonMenu from "./buttonMenu";
-import RadioGroup from "./radioGroup";
-import AdditionalOrder from "./additionalOrder";
-import Loading from "./loanding";
+import "./orderPage.css";
+import ListMenu from "../components/listMenu/listMenu";
+import ButtonMenu from "../components/buttonMenu/buttonMenu";
+import RadioGroup from "../components/radioGroup/radioGroup";
+import AdditionalOrder from "../components/aditionalOrder/additionalOrder";
+import Loading from "../components/loading/loading";
 import api from "../services/api";
-import Popover from "./popover";
+import Popover from "../components/popover/popover";
 import React, { useEffect, useState } from "react";
 import { ContextOrders } from "../provider/contextOrders";
 
