@@ -12,7 +12,7 @@ const renderComponente = () =>{
           <Header />
         </ContextOrders.Provider>
       );
-}
+};
 
 describe("Header", () => {
   it("should render correctly additional header tittle application", () => {
@@ -45,5 +45,18 @@ describe("Header", () => {
       fireEvent.change(selectElement, { target: { value: addresses[0].address } });
       expect(selectElement.value).toBe(addresses[0].address);
   });
+
+  it("should render correctly additional header IMG header--user application",()=>{
+     renderComponente();
+     const logoUser = screen.getByAltText('user');
+     expect(logoUser).toBeInTheDocument();
+  });
+
+  it("should render correctly additional header Logged application", () => {
+    renderComponente();
+    expect(screen.getByText('Entrar')).toBeInTheDocument();
+  });
+
+
 });
 
