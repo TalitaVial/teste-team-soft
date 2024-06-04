@@ -5,6 +5,7 @@ import shopping from "../../assets/shopping.svg";
 import "./header.css";
 import { ContextOrders } from "../../provider/contextOrders";
 import React from "react";
+import addresses from './data/address'
 
 export default function Header() {
   const { orders } = React.useContext(ContextOrders);
@@ -20,8 +21,9 @@ export default function Header() {
         <div className="header__selected">
           <p className="header--placeholder">Entrega:</p>
           <select name="selected" id="selected">
-            <option value="">R. Antonio Braune, 222</option>
-            <option value="">R. Antonio Braune, 222</option>
+          {addresses.map((item, index) => (
+              <option key={index} value={item.address}>{item.address}</option>
+            ))}
           </select>
         </div>
         <input

@@ -1,7 +1,7 @@
 // additionalOrder.test.tsx
 import React from 'react';
 import { render, screen } from "@testing-library/react";
-import '@testing-library/jest-dom/extend-expect'; // Importa jest-dom para acesso ao matcher toBeInTheDocument
+import '@testing-library/jest-dom/extend-expect';
 import AdditionalOrder from "../aditionalOrder/additionalOrder";
 
 describe('AdditionalOrder', () => {
