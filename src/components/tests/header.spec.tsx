@@ -73,7 +73,17 @@ describe("Header", () => {
     const notificationBadge = screen.queryByText('0');
     expect(notificationBadge).not.toBeInTheDocument();
   })
+  
+  it("should render correctly additional header IMG header--user shopping application",()=>{
+    renderComponente();
+    const logoshopping = screen.getByAltText('shopping');
+    expect(logoshopping).toBeInTheDocument();
+  });
 
+  it("should render correctly additional header tittle shopping application", () => {
+    renderComponente();
+    expect(screen.getByText('Carrinho')).toBeInTheDocument();
+  });
 
 });
 
