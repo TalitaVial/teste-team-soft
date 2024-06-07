@@ -5,8 +5,12 @@ import Header from '../header/header';
 import { ContextOrders } from "../../provider/contextOrders";
 import addresses from '../header/data/address';
 
-const renderComponente = () =>{
-    const mockOrders = { orders: [] }; 
+interface Order {
+  id: number;
+}
+
+const renderComponente = (orders: Order[] = []) =>{
+    const mockOrders = { orders }; 
     render(
         <ContextOrders.Provider value={mockOrders}>
           <Header />
@@ -57,6 +61,29 @@ describe("Header", () => {
     expect(screen.getByText('Entrar')).toBeInTheDocument();
   });
 
+  it("should show the correct total orders in the notification badge", () =>{
+    const mockOrders = [{id: 1}, {id: 2}, {id: 3}];
+    renderComponente(mockOrders);
+    const notificationBadge = screen.getByText(mockOrders.length.toString());
+    expect(notificationBadge).toBeInTheDocument();
+  });
+
+  it("should not show the notification badge if there are no orders",()=>{
+    renderComponente();
+    const notificationBadge = screen.queryByText('0');
+    expect(notificationBadge).not.toBeInTheDocument();
+  })
+  
+  it("should render correctly additional header IMG header--user shopping application",()=>{
+    renderComponente();
+    const logoshopping = screen.getByAltText('shopping');
+    expect(logoshopping).toBeInTheDocument();
+  });
+
+  it("should render correctly additional header tittle shopping application", () => {
+    renderComponente();
+    expect(screen.getByText('Carrinho')).toBeInTheDocument();
+  });
 
 });
 

@@ -8,7 +8,7 @@ import React from "react";
 import addresses from './data/address'
 
 export default function Header() {
-  const { orders } = React.useContext(ContextOrders);
+  const { orders = []} = React.useContext(ContextOrders);
   var total = orders.length;
 
   return (
@@ -39,7 +39,7 @@ export default function Header() {
             <p className="header--text">Entrar</p>
           </div>
           <div className="header--user">
-            {total >= 1 && <div className="header--notification">{total}</div>}
+            {total >= 1 && <div className="header--notification" data-testid="notification-badge">{total}</div>}
             <img className="header--user--img" src={shopping} alt="shopping" />
             <p className="header--text">Carrinho</p>
           </div>
