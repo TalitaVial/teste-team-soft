@@ -9,7 +9,7 @@ Instala as dependências do projeto
 Executa o aplicativo no modo de desenvolvimento.
 Abra http://localhost:3000 para visualizá-lo no navegador.
 
-### `npm start`
+### `npm test`
 
 Executa os testes da aplicação.
 
@@ -38,6 +38,7 @@ Executa os testes da aplicação.
   $ git checkout -b chore/documentos_atualizados
   $ git checkout -b bugfix/correcao_bug
   $ git checkout -b fix/correcao_codigo
+  $ git checkout -b test/testes_codigo
   ```
 
 - Padrões de commits, escritos em portugês e seguindo a doc:
@@ -50,6 +51,7 @@ Executa os testes da aplicação.
   $ git commit -m "chore: commit descricao"
   $ git commit -m "bugfix: commit descricao"
   $ git commit -m "fix: commit descricao"
+  $ git commit -m "test: commit descricao"
   ```
 
 - Padrões de Merge requests, escritos em português (prefixo + breve descrição do
