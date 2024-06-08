@@ -1,7 +1,14 @@
+import React from 'react'
 import ButtonMenu from "../buttonMenu/buttonMenu";
 import "./listMenu.css";
 
-export default function ListMenu({ item, valor, onChangeValue }) {
+interface ListMenuProps {
+  item: string;
+  valor: number;
+  onChangeValue?: () => void;
+}
+
+const ListMenu = ({ item, valor, onChangeValue }: ListMenuProps) => {
   return (
     <div >
       <div className="card" data-testid="list-menu">
@@ -15,3 +22,5 @@ export default function ListMenu({ item, valor, onChangeValue }) {
     </div>
   );
 }
+
+export default ListMenu;

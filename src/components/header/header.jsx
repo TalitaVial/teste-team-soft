@@ -5,7 +5,7 @@ import shopping from "../../assets/shopping.svg";
 import "./header.css";
 import { ContextOrders } from "../../provider/contextOrders";
 import React from "react";
-import addresses from './data/address'
+import addresses from './data/address';
 
 export default function Header() {
   const { orders = []} = React.useContext(ContextOrders);
