@@ -38,7 +38,9 @@ export default function ButtonMenu({ onChangeValue }) {
             {items <= 0 && <div className="btn--remove--disable"></div>}
           </button>
         </div>
+        <div data-testid="item-count">
         {items}
+        </div>
         <div className="btn__img">
           <button onClick={(e) => handleAddItem(e)} className="btn__link--add">
             <img src={add} alt="add" />
