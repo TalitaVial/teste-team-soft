@@ -35,6 +35,7 @@ describe("Header", () => {
     const logoImage = screen.getByAltText('Logo');
     expect(logoImage).toBeInTheDocument();
   });
+  
   it("should render the select element correctly", () => {
     renderComponente();
     addresses.forEach((address) => {
