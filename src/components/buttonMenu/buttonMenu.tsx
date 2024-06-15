@@ -1,12 +1,17 @@
+import React, { FC } from 'react';
 import "./buttonMenu.css";
 import remove from "../../assets/remove.png";
 import add from "../../assets/add.png";
 import { useState } from "react";
 
-export default function ButtonMenu({ onChangeValue }) {
+interface ButtonMenuProps {
+  onChangeValue: (value: number) => void;
+}
+
+const ButtonMenu: FC<ButtonMenuProps> = ({ onChangeValue }) => {
   const [items, setItems] = useState(0);
 
-  const handleRemoveItem = (e) => {
+  const handleRemoveItem = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (items >= 1) {
       const removeItem = items - 1;
@@ -16,7 +21,7 @@ export default function ButtonMenu({ onChangeValue }) {
     }
   };
 
-  const handleAddItem = (e) => {
+  const handleAddItem = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (items <= 7) {
       const addItem = items + 1;
@@ -39,7 +44,7 @@ export default function ButtonMenu({ onChangeValue }) {
           </button>
         </div>
         <div data-testid="item-count">
-        {items}
+          {items}
         </div>
         <div className="btn__img">
           <button onClick={(e) => handleAddItem(e)} className="btn__link--add">
@@ -49,4 +54,6 @@ export default function ButtonMenu({ onChangeValue }) {
       </div>
     </div>
   );
-}
+};
+
+export default ButtonMenu;

@@ -1,11 +1,21 @@
+import React from "react";
 import "./radioGroup.css";
 import RadioButton from "../radioButton/radioButton";
 
-export default function RadioGroup(props) {
+interface Option {
+  label: string;
+  value: number;
+}
+
+interface RadioGroupProps {
+  options: Option[];
+}
+
+export default function RadioGroup({ options }: RadioGroupProps) {
   return (
     <div className="container__chekBox">
       <form className="container--item">
-        {props.options.map((option, i) => (
+        {options.map((option, i) => (
           <RadioButton key={i} {...option} />
         ))}
       </form>
