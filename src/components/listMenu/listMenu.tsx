@@ -5,18 +5,18 @@ import "./listMenu.css";
 interface ListMenuProps {
   item: string;
   valor: number;
-  onChangeValue?: () => void;
+  onChangeValue?: (value: number) => void;
 }
 
 const ListMenu = ({ item, valor, onChangeValue }: ListMenuProps) => {
   return (
-    <div >
+    <div>
       <div className="card" data-testid="list-menu">
-        <div className="card__item" >
-          <p className="card--title" >{item}</p>
+        <div className="card__item">
+          <p className="card--title">{item}</p>
           <p className="card--money">+ R${valor}</p>
         </div>
-        <ButtonMenu onChangeValue={onChangeValue} />
+        <ButtonMenu onChangeValue={onChangeValue || (() => {})} />
       </div>
       <div className="card__line"></div>
     </div>
