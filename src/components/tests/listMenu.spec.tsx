@@ -16,7 +16,7 @@ const renderComponente = (orders: Order) =>{
 }
 
 describe('ListMenu',()=>{
-    it('should render correctly', () => {
+    it('should render correctly component list Menu', () => {
         const order = { item: 'Pizza', valor: 15 };
         renderComponente(order);
 
