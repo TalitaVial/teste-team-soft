@@ -2,8 +2,22 @@ import React from "react";
 import "./popover.css";
 import { ContextOrders } from "../../provider/contextOrders";
 
-export default function Popover({ order }) {
-  const { orders = []} = React.useContext(ContextOrders);
+interface Ingredient {
+  qntd: number | string;
+  nm_item: string;
+}
+
+interface Order {
+  nm_product: string;
+  ingredients?: Ingredient[];
+}
+
+interface PopoverProps {
+  order: Order;
+}
+
+export default function Popover({ order }: PopoverProps) {
+  const { orders = [] } = React.useContext(ContextOrders);
   return (
     <div className="container_pop">
       <div className="container__title">

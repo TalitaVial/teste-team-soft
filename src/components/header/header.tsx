@@ -1,10 +1,10 @@
+import React from 'react';
 import arrow_left from "../../assets/arrow_left.png";
 import Deliverize from "../../assets/Deliverize.svg";
 import user from "../../assets/user.svg";
 import shopping from "../../assets/shopping.svg";
 import "./header.css";
 import { ContextOrders } from "../../provider/contextOrders";
-import React from "react";
 import addresses from './data/address';
 
 export default function Header() {
